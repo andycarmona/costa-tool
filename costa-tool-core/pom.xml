@@ -9,5 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <name>VGSC :: Costa tool :: core</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.vgsc</groupId>
+            <artifactId>costa-tool-db</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
     <artifactId>costa-tool-core</artifactId>
+
 </project>
