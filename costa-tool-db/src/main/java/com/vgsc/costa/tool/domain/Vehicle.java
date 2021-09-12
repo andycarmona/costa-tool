@@ -1,4 +1,4 @@
-package com.vgcs.costa.tool.domain;
+package com.vgsc.costa.tool.domain;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
