@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Table(name = "vehicle")
 public class Vehicle {
 
-    private Vehicle(){}
+    public Vehicle(){}
 
     public Vehicle(String id, String name) {
         this.id = id;
