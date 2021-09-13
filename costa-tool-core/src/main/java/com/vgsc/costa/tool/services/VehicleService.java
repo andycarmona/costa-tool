@@ -1,4 +1,4 @@
-package com.vgcs.costatool.service;
+package com.vgsc.costa.tool.services;
 
 
 import com.vgsc.costa.tool.domain.Vehicle;
@@ -18,11 +18,11 @@ public class VehicleService implements GraphQLQueryResolver {
         this.vehicleRepository = vehicleRepository;
     }
 
-    public Optional<Vehicle> findById(String id) {
+    public Optional<Vehicle> getVehicleById(String id) {
         return vehicleRepository.findById( id );
     }
 
-    public List<Vehicle> findAll() {
+    public List<Vehicle> getVehicles() {
         return vehicleRepository.findAll();
     }
 

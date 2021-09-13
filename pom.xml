@@ -20,6 +20,7 @@
     <description>Demo project for vgsc</description>
     <properties>
         <java.version>11</java.version>
+        <graphql.version>11.0.0</graphql.version>
     </properties>
     <dependencies>
         <dependency>
@@ -39,7 +40,30 @@
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>graphql-spring-boot-starter</artifactId>
-            <version>11.0.0</version>
+            <version>${graphql.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.graphql-java-kickstart</groupId>
+            <artifactId>playground-spring-boot-starter</artifactId>
+            <version>${graphql.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--Voyager Extension-->
+        <dependency>
+            <groupId>com.graphql-java-kickstart</groupId>
+            <artifactId>voyager-spring-boot-starter</artifactId>
+            <version>${graphql.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--Test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
