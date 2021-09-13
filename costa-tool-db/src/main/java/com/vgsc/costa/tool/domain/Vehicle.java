@@ -1,12 +1,16 @@
 package com.vgsc.costa.tool.domain;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Data
-@Document
+@Entity
+@Table(name = "vehicle")
 public class Vehicle {
 
     private Vehicle(){}
@@ -19,5 +23,6 @@ public class Vehicle {
     @Id
     private String id;
 
+    @Column(name = "name")
     private String name;
 }

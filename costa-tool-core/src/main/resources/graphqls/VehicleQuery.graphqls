@@ -1,0 +1,4 @@
+type Query {
+    getVehicles:[Vehicle]
+    getVehicleById(id: ID!):Vehicle
+}
