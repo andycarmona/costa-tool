@@ -2,3 +2,12 @@ type Vehicle {
     id: ID!,
     name: String
 }
+
+type Query {
+    getVehicles:[Vehicle]
+    getVehicleById(id: ID!):Vehicle
+}
+
+type Mutation {
+    addVehicle(id: String! , name: String!) : Vehicle!
+}

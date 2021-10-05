@@ -26,7 +26,7 @@ public class MockoonClient {
 
     public void saveVehicles(VehicleRepository vehicleRepository) {
         CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
-        String baseUrl = "http://localhost:1337/vehicle/list";
+        String baseUrl = "http://localhost:3004/vehicle/list";
         HttpGet getRequest = new HttpGet( baseUrl );
         try (CloseableHttpClient httpClient = closeableHttpClient;
              CloseableHttpResponse response = httpClient.execute( getRequest )) {
