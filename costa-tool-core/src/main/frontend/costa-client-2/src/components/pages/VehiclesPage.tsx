@@ -30,7 +30,7 @@ export class VehiclesPage extends React.Component<AssetInfoProps,
                 console.log(response.data);
             }).catch(e => {
             console.log(e);
-        });;
+        });
     }
 
     public render() {
