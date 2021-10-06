@@ -23,6 +23,10 @@ Steps
     - To get vehicle by id * query{
         getVehicleById(id:VEHICLE_ID){id,name}
       }
+    - Add vehicle * {
+      addVehicle(id: "1234", name: "car2"){id name}
+      }
+    - To listen to add events * subscription {vehicleCreation{id name}}
 
 How to test FE part:
 

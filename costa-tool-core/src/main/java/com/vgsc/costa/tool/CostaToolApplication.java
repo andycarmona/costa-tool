@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({"com.vgsc.costa.tool.services","com.vgsc.costa.tool.resolver"})
+@ComponentScan({"com.vgsc.costa.tool.services","com.vgsc.costa.tool.resolver", "com.vgsc.costa.tool.configs"})
 @EntityScan("com.vgsc.costa.tool.domain")
 @EnableJpaRepositories("com.vgsc.costa.tool.repository")
 public class CostaToolApplication {

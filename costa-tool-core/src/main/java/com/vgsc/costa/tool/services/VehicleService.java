@@ -2,20 +2,19 @@ package com.vgsc.costa.tool.services;
 
 
 import com.vgsc.costa.tool.domain.Vehicle;
+import com.vgsc.costa.tool.publisher.VehiclePublisher;
 import com.vgsc.costa.tool.repository.VehicleRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class VehicleService {
 
     private final VehicleRepository vehicleRepository;
-
-    public VehicleService(VehicleRepository vehicleRepository) {
-        this.vehicleRepository = vehicleRepository;
-    }
 
     public Optional<Vehicle> getVehicleById(String id) {
         return vehicleRepository.findById( id );
@@ -23,6 +22,6 @@ public class VehicleService {
 
     public Iterable<Vehicle> getVehicles() { return vehicleRepository.findAll(); }
     
-    public Vehicle addVehicle(Vehicle vehicle) {return vehicleRepository.save(vehicle); }
+    public Vehicle addVehicle(Vehicle vehicle) { return vehicleRepository.save(vehicle); }
 
 }
