@@ -11,3 +11,7 @@ type Query {
 type Mutation {
     addVehicle(id: String! , name: String!) : Vehicle!
 }
+
+type Subscription {
+    vehicleCreation: Vehicle!
+}
