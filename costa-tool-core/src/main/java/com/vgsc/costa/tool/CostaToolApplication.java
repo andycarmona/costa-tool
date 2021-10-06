@@ -9,11 +9,13 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
+import org.springframework.web.reactive.config.EnableWebFlux;
 
 @SpringBootApplication
 @ComponentScan({"com.vgsc.costa.tool.services","com.vgsc.costa.tool.resolver", "com.vgsc.costa.tool.configs"})
 @EntityScan("com.vgsc.costa.tool.domain")
-@EnableJpaRepositories("com.vgsc.costa.tool.repository")
+@EnableR2dbcRepositories
 public class CostaToolApplication {
 
 	public static void main(String[] args) {
