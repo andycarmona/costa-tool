@@ -10,8 +10,8 @@ import reactor.core.publisher.Sinks;
 @Component
 public class VehicleMutationResolver implements GraphQLMutationResolver {
 
-    private VehicleService vehicleService;
-    private Sinks.Many<Vehicle> vehicleSink;
+    private final VehicleService vehicleService;
+    private final Sinks.Many<Vehicle> vehicleSink;
 
     @Autowired
     public VehicleMutationResolver(VehicleService vehicleService, Sinks.Many<Vehicle> vehicleSink) {

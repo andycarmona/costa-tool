@@ -12,7 +12,7 @@ import reactor.core.publisher.Flux;
 @Component
 public class VehicleSubscriptionResolver implements GraphQLSubscriptionResolver {
 
-    private Flux<Vehicle> vehicleEvents;
+    private final Flux<Vehicle> vehicleEvents;
 
     @Autowired
     public VehicleSubscriptionResolver(Flux<Vehicle> vehicleEvents) {
