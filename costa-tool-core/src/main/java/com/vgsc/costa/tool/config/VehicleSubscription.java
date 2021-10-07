@@ -1,4 +1,4 @@
-package com.vgsc.costa.tool.configs;
+package com.vgsc.costa.tool.config;
 
 import com.vgsc.costa.tool.domain.Vehicle;
 import org.springframework.context.annotation.Bean;

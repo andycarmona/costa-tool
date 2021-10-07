@@ -1,11 +1,14 @@
 package com.vgsc.costa.tool.resolver;
 
+import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.vgsc.costa.tool.domain.Vehicle;
 import com.vgsc.costa.tool.services.VehicleService;
-import graphql.kickstart.tools.GraphQLMutationResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import reactor.core.publisher.Mono;
 import reactor.core.publisher.Sinks;
+
+import java.util.Optional;
 
 @Component
 public class VehicleMutationResolver implements GraphQLMutationResolver {
@@ -23,8 +26,8 @@ public class VehicleMutationResolver implements GraphQLMutationResolver {
         Vehicle vehicle = new Vehicle();
         vehicle.setId(id);
         vehicle.setName(name);
-        Vehicle savedVehicle = vehicleService.addVehicle(vehicle);
+        Mono<Vehicle> savedVehicle = vehicleService.addVehicle(vehicle);
         vehicleSink.tryEmitNext(vehicle);
-        return savedVehicle;
+        return savedVehicle.block();
     }
 }

@@ -1,7 +1,7 @@
 package com.vgsc.costa.tool.resolver;
 
+import com.coxautodev.graphql.tools.GraphQLSubscriptionResolver;
 import com.vgsc.costa.tool.domain.Vehicle;
-import graphql.kickstart.tools.GraphQLSubscriptionResolver;
 import lombok.extern.slf4j.Slf4j;
 import org.reactivestreams.Publisher;
 import org.springframework.beans.factory.annotation.Autowired;

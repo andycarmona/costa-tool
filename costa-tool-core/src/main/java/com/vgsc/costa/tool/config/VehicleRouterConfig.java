@@ -12,7 +12,6 @@ import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
 @Configuration
-@EnableWebFlux
 @ComponentScan("com.vgsc.costa.tool.handlers")
 public class VehicleRouterConfig {
 

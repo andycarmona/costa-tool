@@ -1,12 +1,10 @@
 package com.vgsc.costa.tool.resolver;
 
+import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.vgsc.costa.tool.domain.Vehicle;
 import com.vgsc.costa.tool.services.VehicleService;
-import graphql.kickstart.tools.GraphQLQueryResolver;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 import java.util.Optional;
 
@@ -16,9 +14,7 @@ public class VehicleQueryResolver implements GraphQLQueryResolver {
 
     private final VehicleService vehicleService;
 
-    public Mono<Vehicle> getVehicleById(String id) {
-        return vehicleService.getVehicleById(id);
-    }
+    public Vehicle getVehicleById(String id) { return vehicleService.getVehicleById(id).block(); }
 
-    public Flux<Vehicle> getVehicles() { return vehicleService.getVehicles(); }
+    public Iterable<Vehicle> getVehicles() { return vehicleService.getVehicles().toIterable(); }
 }
